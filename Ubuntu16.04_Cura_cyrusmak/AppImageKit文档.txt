@@ -1,0 +1,6 @@
+
+AppImageKitÖ÷Ò³£º
+http://www.githubs.cn/project/1531
+
+What is an ¡°AppImage¡±? How do I install it?
+https://askubuntu.com/questions/774490/what-is-an-appimage-how-do-i-install-it

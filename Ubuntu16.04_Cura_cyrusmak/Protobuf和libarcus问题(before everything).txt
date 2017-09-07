@@ -1,0 +1,16 @@
+/usr/include/google/protobuf/reflection.h:539:37: error: ‘is_proto_enum’ was not declared in this scope
+
+https://github.com/Ultimaker/libArcus/issues/18
+
+solutions:
+before any protobuf compile
+
+sudo apt-get remove libprotocbuf-dev
+进入protobuf文件夹
+make uninstall
+make clean
+rm -rf /usr/include/google/protobuf
+
+then git clone http://github.com/google/protobuf.git
+and install
+

@@ -1,0 +1,38 @@
+Install SIP
+
+PyQt requires to have the SIP module installed. SIP is a tool for automatically generating Python bindings for C and C++ libraries.
+SIP Docs
+SIP Download
+You can either download the .tar.gz file, or install the latest from the source repository with mercurial (hg):
+# Clone the source code
+$ cd /tmp/
+$ hg clone http://www.riverbankcomputing.com/hg/sip
+$ cd sip
+
+# Generate the build configuration
+$ python2.7 build.py prepare  # build.py is a Python 2 script
+$ python3.4 configure.py -d ~/.venv/qtproject/lib/python3.4/site-packages
+
+# Make and install
+$ make
+$ sudo make install
+$ sudo make clean
+Install PyQt5
+
+Finally we get to install the PyQt5 module.
+PyQt5 Docs
+PyQt5 Download
+Start by downloading the tar.gz file, in this case PyQt-gpl-5.5.1.tar.gz, and extracting it:
+# Extract the tar.gz file
+$ tar -xvf PyQt-gpl-5.5.1.tar.gz
+
+# Change into the PyQt source directory
+$ cd PyQt-gpl-5.5.1
+
+# Generate the build configuration (make sure to reference 'qmake' from the Qt libs installation directory)
+$ python3 configure.py --destdir ~/.venv/qtproject/lib/python3.4/site-packages --qmake /opt/qt/5.6/clang_64/bin/qmake
+
+# Make and install
+$ make  # this takes a really long time
+$ sudo make install
+$ sudo make clean
